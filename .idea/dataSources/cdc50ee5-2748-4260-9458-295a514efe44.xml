@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="zhigo@192.168.2.231">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="zhigo">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="base"/>
+    <schema id="4" parent="1" name="cms"/>
+    <schema id="5" parent="1" name="db-mcms-open"/>
+    <schema id="6" parent="1" name="db_easyui"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="raky"/>
+    <schema id="11" parent="1" name="sakila"/>
+    <schema id="12" parent="1" name="shiro"/>
+    <schema id="13" parent="1" name="shop"/>
+    <schema id="14" parent="1" name="ssm_demo_db"/>
+    <schema id="15" parent="1" name="sys"/>
+    <schema id="16" parent="1" name="test"/>
+    <schema id="17" parent="1" name="test4"/>
+    <schema id="18" parent="1" name="test5"/>
+    <schema id="19" parent="1" name="website"/>
+    <schema id="20" parent="1" name="world"/>
+    <table id="21" parent="2" name="zhigo_article"/>
+    <table id="22" parent="2" name="zhigo_banner"/>
+    <table id="23" parent="2" name="zhigo_navigator"/>
+    <table id="24" parent="2" name="zhigo_robot"/>
+    <table id="25" parent="2" name="zhigo_user"/>
+    <table id="26" parent="2" name="zhigo_video"/>
+    <column id="27" parent="21" name="article_id">
+      <Position>1</Position>
+      <Comment>文章ID</Comment>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="21" name="article_title">
+      <Position>2</Position>
+      <Comment>文章标题</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="21" name="article_content">
+      <Position>3</Position>
+      <Comment>文章内容</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="30" parent="21" name="article_view_count">
+      <Position>4</Position>
+      <Comment>文章浏览次数</Comment>
+      <DataType>int(255)|0</DataType>
+    </column>
+    <column id="31" parent="21" name="article_release_time">
+      <Position>5</Position>
+      <Comment>发布时间</Comment>
+      <DataType>datetime(6)|0</DataType>
+    </column>
+    <column id="32" parent="21" name="article_image">
+      <Position>6</Position>
+      <Comment>文章图片</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="21" name="n_id">
+      <Position>7</Position>
+      <Comment>文章所在导航栏ID</Comment>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="21" name="article_sort">
+      <Position>8</Position>
+      <Comment>文章排序</Comment>
+      <DataType>int(255)|0</DataType>
+    </column>
+    <key id="35" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>article_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="22" name="banner_id">
+      <Position>1</Position>
+      <Comment>轮播图ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="22" name="banner_path">
+      <Position>2</Position>
+      <Comment>轮播图路径</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="22" name="banner_title">
+      <Position>3</Position>
+      <Comment>轮播图标题 </Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="39" parent="22" name="banner_sort">
+      <Position>4</Position>
+      <Comment>轮播图顺序</Comment>
+      <DataType>int(10)|0</DataType>
+    </column>
+    <key id="40" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>banner_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="23" name="n_id">
+      <Position>1</Position>
+      <Comment>导航栏</Comment>
+      <DataType>smallint(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="23" name="n_value">
+      <Position>2</Position>
+      <Comment>导航栏名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="43" parent="23" name="n_update_date">
+      <Position>3</Position>
+      <Comment>导航栏更新时间</Comment>
+      <DataType>datetime(6)|0</DataType>
+    </column>
+    <key id="44" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>n_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="45" parent="24" name="product_id">
+      <Position>1</Position>
+      <Comment>产品ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="24" name="product_type">
+      <Position>2</Position>
+      <Comment>产品系列</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="47" parent="24" name="product_weight">
+      <Position>3</Position>
+      <Comment>产品重量</Comment>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="48" parent="24" name="product_load">
+      <Position>4</Position>
+      <Comment>产品负载</Comment>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="49" parent="24" name="product_accuracy">
+      <Position>5</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="50" parent="24" name="product_range">
+      <Position>6</Position>
+      <DataType>int(255)|0</DataType>
+    </column>
+    <column id="51" parent="24" name="product_speed">
+      <Position>7</Position>
+      <Comment>产品速度</Comment>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="52" parent="24" name="n_id">
+      <Position>8</Position>
+      <Comment>所属导航栏</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="53" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>product_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="25" name="user_id">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>smallint(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="55" parent="25" name="user_name">
+      <Position>2</Position>
+      <Comment>用户名</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="56" parent="25" name="user_logintime">
+      <Position>3</Position>
+      <Comment>用户登录时间</Comment>
+      <DataType>datetime(6)|0</DataType>
+    </column>
+    <key id="57" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="26" name="video_id">
+      <Position>1</Position>
+      <Comment>视频ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="59" parent="26" name="video_path">
+      <Position>2</Position>
+      <Comment>视频所在地址</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="60" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>video_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
